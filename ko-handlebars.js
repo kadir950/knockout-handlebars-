@@ -29,10 +29,7 @@
                 }
                                 
                 const resultNodes = executeTemplate(precompiled, { 'koBindingContext': bindingContext });
-
-
                 const divx = document.createElement('div');
-                debugger;
                 divx.innerHTML = resultNodes;
                 return Array.from(divx.children);
             };
