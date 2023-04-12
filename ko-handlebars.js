@@ -11,6 +11,8 @@
 
         const HandlebarsEngine = function () {
 
+            this['allowTemplateRewriting'] = false; //false:supports if,each,with etc true: doesn't support if,each,with but supports data-bind less tag binding <span data-bind="text:username"></span> will render like that <span>Jim</span> 
+            
             function executeTemplate(compiledTemplate,  handlebarsTemplateOptions) {
                 return  compiledTemplate(handlebarsTemplateOptions, {
                     allowProtoMethodsByDefault: true,
